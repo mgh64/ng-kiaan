@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// import { AuthService } from './auth.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -10,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 export class AuthComponent implements OnInit {
 
   constructor(
-    // private AuthService: AuthService,
+    private AuthService: AuthService,
 
   ) { }
 
   ngOnInit() {
     // console.log('123');
-    // return this.AuthService.getTest().subscribe(data => console.log(data));
+    return this.AuthService.getTest().subscribe(data => console.log(data));
   }
 
 }

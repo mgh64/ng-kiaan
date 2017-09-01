@@ -1,0 +1,29 @@
+{
+  "login_css": [
+    "client/public/assets/css/bootstrap.min.css",
+    "client/public/assets/plugins/toastr/toastr.min.css",
+    "client/public/assets/font-awesome/4.5.0/css/font-awesome.min.css",
+    "client/public/dist/css/myfonts.css",
+    "client/public/dist/css/login.css"
+  ],
+  "login_js": [
+    "client/public/assets/plugins/angular/angular.min.js",
+    "client/public/assets/js/jquery-2.1.4.min.js",
+    "client/public/assets/js/bootstrap.min.js",
+    "client/public/assets/plugins/toastr/toastr.min.js"
+  ],
+  "login_controller": [
+    "client/controllers/login-controller.js",
+    "client/angular_modules/*.js"
+  ],
+  "index_controller" : [
+    "client/controllers/*.js",
+    "!client/controllers/login-controller.js",
+    "client/angular_modules/*.js",
+    "client/ctlr-html/**/*.js",
+    "client/public/dist/js/wordifyfa.js"
+  ],
+  "html": [
+      "client/ctlr-html/**/*.html"
+   ]
+}

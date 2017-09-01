@@ -1,0 +1,44 @@
+{
+  "name": "kiaan",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "authors": [
+    "mostafa ghasemi [mostafa.gh64@gmail.com]"
+  ],
+  "dependencies": {
+    "bcrypt": "^0.8.7",
+    "body-parser": "~1.15.1",
+    "colors": "^1.1.2",
+    "compression": "^1.6.2",
+    "connect-redis": "^3.1.0",
+    "cookie-parser": "~1.4.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "date-utils": "^1.2.21",
+    "debug": "~2.2.0",
+    "ejs": "~2.4.1",
+    "express": "~4.13.4",
+    "express-session": "^1.14.0",
+    "fast-csv": "^2.3.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-concat": "^2.6.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^2.0.0",
+    "jalaali-js": "^1.0.0",
+    "lodash": "^4.15.0",
+    "mongoose": "^4.7.8",
+    "mongoose-validator": "^1.2.5",
+    "morgan": "~1.7.0",
+    "phantom": "^4.0.0",
+    "redis": "^2.6.2",
+    "require-dir": "^0.3.0",
+    "serve-favicon": "~2.3.0"
+  }
+}

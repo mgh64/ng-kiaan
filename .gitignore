@@ -1,0 +1,6 @@
+/node_modules/
+*~
+~*
+*.log
+client/public/controllers/
+client/angular/node_modules/

@@ -1,0 +1,56 @@
+<body class="hold-transition login-page">
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="../../index2.html"><b>Admin</b>LTE</a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Sign in to start your session</p>
+
+      <form (submit)="login()">
+
+        <div dir="ltr" class="form-group has-feedback">
+          <input type="email" class="form-control" placeholder="Email" required minlength="8" name="email" [(ngModel)]="email" #eml="ngModel" autocomplete="off" autofocus>
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          <div *ngIf="eml.errors && (eml.dirty || eml.touched)" class="alert alert-danger">
+            <div [hidden]="!eml.errors.required">
+              email required
+            </div>
+            <div [hidden]="!eml.errors.minlength">
+              email min 8 caracteres
+            </div>
+          </div>
+        </div>
+
+        <div dir="ltr" class="form-group has-feedback">
+          <input type="password" class="form-control" placeholder="Password" required minlength="6" name="passwordd" [(ngModel)]="password" #passwd="ngModel">
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          <div *ngIf="passwd.errors && (passwd.dirty || passwd.touched)" class="alert alert-danger">
+            <div [hidden]="!passwd.errors.required">
+              Le password est requis
+            </div>
+            <div [hidden]="!passwd.errors.minlength">
+              Le password doit avoir au moins 6 caractères
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- /.col -->
+          <div class="col-xs-12">
+            <button type="submit" class="btn btn-primary btn-block btn-flat" (click)="login()">Sign In</button>
+          </div>
+          <!-- /.col -->
+        </div>
+      </form>
+      <br/>
+      <a href="#">I forgot my password</a><br>
+      <a routerLink="/register" class="text-center">Register a new membership</a>
+
+      <!-- <toaster-container [toasterconfig]="toasterconfig">
+      </toaster-container>
+      <button (click)="popToast()">pop toast</button> -->
+    </div>
+    <!-- /.login-box-body -->
+  </div>
+  <!-- /.login-box -->
+</body>

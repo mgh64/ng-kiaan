@@ -1,0 +1,27 @@
+<!-- <p>
+  product-detail works!
+</p> -->
+<div class="panel panel-primary" *ngIf="product">
+  <div class="panel-heading" style="font-size:large">
+    {{pageTitle + ": " + product.productName}}
+  </div>
+
+  <div class="panel-body">
+    <div>
+      Name: {{product.productName}}
+    </div>
+    <div>
+      Code: {{product.productCode}}
+    </div>
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+  </div>
+
+  <div class="panel-footer">
+    <a class="btn btn-default" [routerLink]="['/products']" queryParamsHandling="preserve">
+            <i class="glyphicon glyphicon-chevron-left"></i> Back
+    </a>
+    <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/products', product.id, 'edit']">
+       Edit
+    </a>
+  </div>
+</div>

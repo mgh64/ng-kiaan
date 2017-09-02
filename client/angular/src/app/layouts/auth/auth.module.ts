@@ -7,7 +7,7 @@ import { AuthService } from './auth.service';
 import { AuthComponent } from './auth.component';
 
 import { AppHeaderComponent } from './widgets/app-header';
-// import { AppFooterComponent } from './widgets/app-footer';
+import { AppFooterComponent } from './widgets/app-footer';
 // import { MenuAsideComponent } from './widgets/menu-aside';
 // import { ControlSidebarComponent } from './widgets/control-sidebar';
 // import { MessagesBoxComponent } from './widgets/messages-box';
@@ -19,7 +19,7 @@ import { AppHeaderComponent } from './widgets/app-header';
 let widgets = [
   // BreadcrumbComponent,
   AppHeaderComponent,
-  // AppFooterComponent,
+  AppFooterComponent,
   // MenuAsideComponent,
   // ControlSidebarComponent,
   // MessagesBoxComponent,

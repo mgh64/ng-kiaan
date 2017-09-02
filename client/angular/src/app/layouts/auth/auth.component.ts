@@ -16,7 +16,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
     // console.log('123');
-    return this.AuthService.getTest().subscribe(data => console.log(data));
+    // return this.AuthService.getTest().subscribe(data => console.log(data));
   }
 
 }

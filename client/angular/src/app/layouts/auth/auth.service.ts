@@ -13,7 +13,7 @@ export class AuthService {
   getTest() {
     // return this.http.get(`http://localhost:3000/bank_info`)
     //   .map((res: Response) => res.json())
-    return this._http.get(`dashboard`)
+    return this._http.get(`persons_info`)
       .map((res: Response) => res)
   }
 }

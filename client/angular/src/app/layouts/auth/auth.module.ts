@@ -8,24 +8,24 @@ import { AuthComponent } from './auth.component';
 
 import { AppHeaderComponent } from './widgets/app-header';
 import { AppFooterComponent } from './widgets/app-footer';
+// import { BreadcrumbComponent } from './widgets/breadcrumb';
 // import { MenuAsideComponent } from './widgets/menu-aside';
 // import { ControlSidebarComponent } from './widgets/control-sidebar';
 // import { MessagesBoxComponent } from './widgets/messages-box';
 // import { NotificationBoxComponent } from './widgets/notification-box';
 // import { TasksBoxComponent } from './widgets/tasks-box';
-// import { UserBoxComponent } from './widgets/user-box';
-// import { BreadcrumbComponent } from './widgets/breadcrumb';
+import { UserBoxComponent } from './widgets/user-box';
 
 let widgets = [
-  // BreadcrumbComponent,
   AppHeaderComponent,
   AppFooterComponent,
+  // BreadcrumbComponent,
   // MenuAsideComponent,
   // ControlSidebarComponent,
   // MessagesBoxComponent,
   // NotificationBoxComponent,
   // TasksBoxComponent,
-  // UserBoxComponent
+  UserBoxComponent
 ];
 
 @NgModule({

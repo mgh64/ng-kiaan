@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class UserBoxComponent implements OnInit {
   // private currentUser: User = new User();
-  //
+
   // constructor(private userServ: UserService, private router: Router) {
   //   // se connecter au modif du user courant
   //     this.userServ.currentUser.subscribe((user: User) => this.currentUser = user);

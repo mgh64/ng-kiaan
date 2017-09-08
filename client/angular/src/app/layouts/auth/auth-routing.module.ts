@@ -2,9 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
+import { PersonListComponent } from '../../pages/person/person-list/person-list.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: AuthComponent }
+  {
+    path: 'home',
+    component: AuthComponent,
+    children: [
+      {
+        path: 'persons',
+        component: PersonListComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

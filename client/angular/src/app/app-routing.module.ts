@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { DashboardComponent } from './pages/dashboard/dashboard.component'
-import { LoginComponent } from './layouts/login/login.component';
-
 import { PageNotFound404Component } from './pages/page-not-found-404/page-not-found-404.component';
+
+import { LoginComponent } from './layouts/login/login.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component'
+
 
 const routes: Routes = [
 
@@ -31,11 +32,10 @@ const routes: Routes = [
   //   ]
   // },
 
-  // {
-  //   path: 'dashboard',
-  //   // pathMatch: 'full',
-  //   component: DashboardComponent
-  // },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: '',
     redirectTo: 'login',

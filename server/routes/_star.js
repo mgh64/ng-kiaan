@@ -75,7 +75,7 @@ module.exports = (function() {
                   } else {
                      // and if the session is not valid we send it to /del :)
                      //  console.security("* some one try route -> " + req.url + " with not valid session! / IP -> " + ip);
-                     res.redirect('/del');
+                     res.redirect('/login');
                   }
                });
 
@@ -84,7 +84,7 @@ module.exports = (function() {
          } else {
             // else it goes to /del hell :)
             // console.very_log("* some one try route -> " + req.url + " but not exists / IP -> " + ip);
-            res.redirect('/del');
+            res.redirect('/login');
          }
       }
    };

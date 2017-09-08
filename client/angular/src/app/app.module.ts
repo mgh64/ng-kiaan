@@ -10,8 +10,8 @@ import { AppComponent } from './app.component';
 
 import { LoginModule } from './layouts/login/login.module'
 import { AuthModule } from './layouts/auth/auth.module'
+// import { PersonModule } from './layouts/auth/pages/person/person.module'
 import { ProductModule } from './pages/product/product.module';
-
 
 import { LoginComponent } from './layouts/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
@@ -38,6 +38,8 @@ let pages = [
     LoginModule,
     AuthModule,
     ProductModule,
+    // PersonModule,
+
     AppRoutingModule
   ],
   bootstrap: [AppComponent]

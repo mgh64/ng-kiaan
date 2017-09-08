@@ -5,11 +5,12 @@ import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthService } from './auth.service';
 import { AuthComponent } from './auth.component';
+import { PersonListComponent } from "../../pages/person/person-list/person-list.component";
 
 import { AppHeaderComponent } from './widgets/app-header';
 import { AppFooterComponent } from './widgets/app-footer';
 // import { BreadcrumbComponent } from './widgets/breadcrumb';
-// import { MenuAsideComponent } from './widgets/menu-aside';
+import { MenuAsideComponent } from './widgets/menu-aside';
 // import { ControlSidebarComponent } from './widgets/control-sidebar';
 // import { MessagesBoxComponent } from './widgets/messages-box';
 // import { NotificationBoxComponent } from './widgets/notification-box';
@@ -20,7 +21,7 @@ let widgets = [
   AppHeaderComponent,
   AppFooterComponent,
   // BreadcrumbComponent,
-  // MenuAsideComponent,
+  MenuAsideComponent,
   // ControlSidebarComponent,
   // MessagesBoxComponent,
   // NotificationBoxComponent,
@@ -35,6 +36,7 @@ let widgets = [
   ],
   declarations: [
     AuthComponent,
+    PersonListComponent,
     widgets
   ],
   providers: [AuthService]

@@ -32,7 +32,7 @@ export class LoginComponent {
         let data: any = Response;
         if (data.auth == true) {
           // console.log('Auth is true');
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['home']);
         } else {
           console.error('درخواست غیر مجاز');
         }

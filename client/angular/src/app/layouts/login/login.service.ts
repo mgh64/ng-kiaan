@@ -4,7 +4,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Router } from '@angular/router';
 // import {IUser} from './user'
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/map';
 
 // import { URLSearchParams } from "@angular/http"
 

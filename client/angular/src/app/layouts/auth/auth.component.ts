@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AuthService } from './auth.service';
+// import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -11,14 +11,14 @@ export class AuthComponent implements OnInit {
   private mylinks: Array<any> = [];
 
   constructor(
-    private AuthService: AuthService,
+    // private AuthService: AuthService,
 
   ) { }
 
   ngOnInit() {
+    window.dispatchEvent(new Event('resize'));
     // console.log('123');
     // return this.AuthService.getTest().subscribe(data => console.log(data));
-
     // define here your own links menu structure
     this.mylinks = [
       {

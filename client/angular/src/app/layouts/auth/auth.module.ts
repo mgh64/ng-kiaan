@@ -3,19 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 
-import { AuthService } from './auth.service';
 import { AuthComponent } from './auth.component';
 import { PersonListComponent } from "../../pages/person/person-list/person-list.component";
 
-import { AppHeaderComponent } from './widgets/app-header';
-import { AppFooterComponent } from './widgets/app-footer';
+import { AppHeaderComponent } from '../../widgets/app-header';
+import { AppFooterComponent } from '../../widgets/app-footer';
 // import { BreadcrumbComponent } from './widgets/breadcrumb';
-import { MenuAsideComponent } from './widgets/menu-aside';
+import { MenuAsideComponent } from '../../widgets/menu-aside';
 // import { ControlSidebarComponent } from './widgets/control-sidebar';
 // import { MessagesBoxComponent } from './widgets/messages-box';
 // import { NotificationBoxComponent } from './widgets/notification-box';
 // import { TasksBoxComponent } from './widgets/tasks-box';
-import { UserBoxComponent } from './widgets/user-box';
+import { UserBoxComponent } from '../../widgets/user-box';
 
 let widgets = [
   AppHeaderComponent,
@@ -39,6 +38,6 @@ let widgets = [
     PersonListComponent,
     widgets
   ],
-  providers: [AuthService]
+  providers: []
 })
 export class AuthModule { }

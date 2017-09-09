@@ -1,50 +1,33 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+// import { AuthGuard } from "./layouts/login/auth.guard";
+// import { AuthComponent } from './layouts/auth/auth.component';
+
 import { PageNotFound404Component } from './pages/page-not-found-404/page-not-found-404.component';
 
 import { LoginComponent } from './layouts/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component'
 
+// import { PersonListComponent } from './pages/person/person-list/person-list.component';
+// import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
 
+  // not logged routes
   // {
-  //   component: LayoutsAuthComponent,
   //   path: '',
-  //   canActivate: [CanActivateGuard],
-  //   children: [
-  //     {
-  //       canActivate: [CanActivateGuard],
-  //       component: HomeComponent,
-  //       path: 'home'
-  //     },
-  //     {
-  //       canActivate: [CanActivateGuard],
-  //       component: PageNumComponent,
-  //       path: 'page/:id'
-  //     },
-  //     {
-  //       canActivate: [CanActivateGuard],
-  //       component: ClientComponent,
-  //       path: 'client'
-  //     }
-  //   ]
+  //   redirectTo: '',
+  //   pathMatch: 'full'
   // },
-
   {
-    path: 'login',
-    component: LoginComponent
-  },
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    component: LoginComponent,
+    path: 'login'
   },
   {
     path: '**',
     component: PageNotFound404Component
   }
+
 ];
 
 @NgModule({

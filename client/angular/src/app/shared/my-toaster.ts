@@ -6,7 +6,7 @@ export class MyToaster {
 
   public constructor() {
     this.toasterconfig = new ToasterConfig({
-      positionClass: "toast-bottom-left",
+      positionClass: 'toast-bottom-left',
       timeout: 5000,
       animation: 'fadeOut',
       limit: 5

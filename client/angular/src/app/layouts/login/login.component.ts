@@ -30,14 +30,14 @@ export class LoginComponent {
     this.AuthService.authenticate('mostafa.gh64@gmail.com', '640120').subscribe(
       Response => {
         // console.log(Response)
-        let data: any = Response;
+        const data: any = Response;
         if (data == true) {
           this.router.navigate(['/persons']);
         } else {
           console.error('درخواست غیر مجاز');
         }
       }
-    )
+    );
 
   }
 

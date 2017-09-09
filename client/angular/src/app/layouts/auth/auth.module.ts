@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthComponent } from './auth.component';
-import { PersonListComponent } from "../../pages/person/person-list/person-list.component";
 
 import { AppHeaderComponent } from '../../widgets/app-header';
 import { AppFooterComponent } from '../../widgets/app-footer';
@@ -15,8 +14,10 @@ import { MenuAsideComponent } from '../../widgets/menu-aside';
 // import { NotificationBoxComponent } from './widgets/notification-box';
 // import { TasksBoxComponent } from './widgets/tasks-box';
 import { UserBoxComponent } from '../../widgets/user-box';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PersonListComponent } from './pages/person/person-list/person-list.component';
 
-let widgets = [
+const widgets = [
   AppHeaderComponent,
   AppFooterComponent,
   // BreadcrumbComponent,
@@ -35,8 +36,9 @@ let widgets = [
   ],
   declarations: [
     AuthComponent,
+    widgets,
+    DashboardComponent,
     PersonListComponent,
-    widgets
   ],
   providers: []
 })

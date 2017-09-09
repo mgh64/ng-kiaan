@@ -27,7 +27,7 @@ describe('Component: MenuAside', () => {
   it('should create the component', inject([], () => {
     return builder.createAsync(MenuAsideComponentTestController)
       .then((fixture: ComponentFixture<any>) => {
-        let query = fixture.debugElement.query(By.directive(MenuAsideComponent));
+        const query = fixture.debugElement.query(By.directive(MenuAsideComponent));
         expect(query).toBeTruthy();
         expect(query.componentInstance).toBeTruthy();
       });

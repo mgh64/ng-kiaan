@@ -27,7 +27,7 @@ describe('Component: UserBox', () => {
   it('should create the component', inject([], () => {
     return builder.createAsync(UserBoxComponentTestController)
       .then((fixture: ComponentFixture<any>) => {
-        let query = fixture.debugElement.query(By.directive(UserBoxComponent));
+        const query = fixture.debugElement.query(By.directive(UserBoxComponent));
         expect(query).toBeTruthy();
         expect(query.componentInstance).toBeTruthy();
       });

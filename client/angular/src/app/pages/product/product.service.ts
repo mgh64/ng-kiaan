@@ -37,8 +37,8 @@ export class ProductService {
   }
 
   deleteProduct(id: number): Observable<Response> {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
 
     const url = `${this.baseUrl}/${id}`;
     return this.http.delete(url, options)
@@ -47,8 +47,8 @@ export class ProductService {
   }
 
   saveProduct(product: IProduct): Observable<IProduct> {
-    let headers = new Headers({ 'Content-Type': 'application/json' });
-    let options = new RequestOptions({ headers: headers });
+    const headers = new Headers({ 'Content-Type': 'application/json' });
+    const options = new RequestOptions({ headers: headers });
 
     if (product.id === 0) {
       return this.createProduct(product, options);
@@ -73,7 +73,7 @@ export class ProductService {
   }
 
   private extractData(response: Response) {
-    let body = response.json();
+    const body = response.json();
     console.log(body);
     return body.data || {};
   }

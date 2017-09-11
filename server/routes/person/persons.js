@@ -11,7 +11,7 @@ var db = require('db');
 var _ = require('lodash');
 var date_to_persian = require('functions/date_to_persian');
 
-router.post('/persons', function(req, res, next) {
+router.get('/_persons', function(req, res, next) {
 
   if (_.includes(req.user._permissions, "root")) {
 

@@ -1,6 +1,6 @@
 {
   "db_url": "mongodb://localhost/kiaan",
-  "port": 3000,
+  "port": 3001,
   "session_secret": "mv'kdj21s6v4vs4v_.s24?/",
   "under_cosnstruct_mode": false,
   "server_init_log" : true

@@ -9,18 +9,18 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     path: '',
     component: AuthComponent,
     // pathMatch: 'full',
     children: [
       {
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         path: 'dashboard',
         component: DashboardComponent
       },
       {
-        canActivate: [AuthGuard],
+        // canActivate: [AuthGuard],
         component: PersonListComponent,
         path: 'persons'
       }

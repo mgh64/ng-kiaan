@@ -17,7 +17,7 @@ module.exports = function(app) {
 
   [
     '_bank.js',
-    'print.js',
+    // 'print.js',
     'print_url.js'
   ].forEach(function(file_name) {
     app.use(require('./print_doc/' + file_name));

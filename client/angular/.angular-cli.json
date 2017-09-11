@@ -24,7 +24,8 @@
       "scripts": [
         "../node_modules/jquery/dist/jquery.js",
         "../node_modules/bootstrap/dist/js/bootstrap.js",
-        "../src/assets/admin-lte/dist/js/app.min.js"
+        "../src/assets/admin-lte/dist/js/app.min.js",
+        "../src/assets/slimScroll/jquery.slimscroll.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

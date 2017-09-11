@@ -1,3 +1,43 @@
-<p>
-  person-list works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box box-info">
+      <div class="box-header">
+        <h3 class="box-title">{{ pageTitle }}</h3>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body">
+        <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+        <table *ngIf="persons && persons.length" class="table direction table-bordered table-hover table-striped">
+          <thead>
+            <tr>
+              <th>کد شخص</th>
+              <th>گروه</th>
+              <th>نوع</th>
+              <th>نام</th>
+              <th>مانده فعلی</th>
+              <th>ماهیت مانده</th>
+              <th>عملیات</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person of persons">
+              <td>{{ person.person_id.id }}</td>
+              <td>{{ person.person_id.group_id.title }}</td>
+              <td>{{ person.person_id.type }}</td>
+              <td>{{ person.person_id.last_name + ' ' + person.person_id.first_name }}</td>
+              <td>{{ person.sum }}</td>
+              <td>{{ person.mahiat }}</td>
+              <td>
+                <a class="btn btn-primary" >
+                  <!-- [routerLink]="['/products', product.id, 'edit']" -->
+                Edit
+              </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.box-body -->
+    </div>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 
 import { LoginModule } from './layouts/login/login.module';
 import { AuthModule } from './layouts/auth/auth.module';
+import { PersonModule } from './layouts/auth/pages/person/person.module';
 
 /// TODO: remove this import
 import { ProductModule } from './pages/product/product.module';
@@ -36,6 +37,7 @@ const pages = [
 
     LoginModule,
     AuthModule,
+    PersonModule,
     //TODO: remove this item
     ProductModule,
 

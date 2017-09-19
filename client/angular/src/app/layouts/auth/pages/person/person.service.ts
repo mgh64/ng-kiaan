@@ -12,7 +12,6 @@ import { Iperson } from './iperson'
 
 @Injectable()
 export class PersonService {
-  private personsUrl = "/_persons";
   private person_type = [{
     title: "حقیقی",
     value: "person"
@@ -29,7 +28,7 @@ export class PersonService {
 
 
   getPersons(): Observable<Iperson[]> {
-    return this.http.get(this.personsUrl)
+    return this.http.get("/_persons")
       .map(this.extractData)
       .do(data => {
         var person_type_map = {};

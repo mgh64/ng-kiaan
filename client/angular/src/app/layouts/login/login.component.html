@@ -9,7 +9,7 @@
 
       <form (submit)="login()">
 
-        <div dir="ltr" class="form-group has-feedback">
+        <div class="form-group has-feedback">
           <input type="email" class="form-control" placeholder="Email" required minlength="8" name="email" [(ngModel)]="email" #eml="ngModel" autocomplete="off" autofocus>
           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           <div *ngIf="eml.errors && (eml.dirty || eml.touched)" class="alert alert-danger">
@@ -22,7 +22,7 @@
           </div>
         </div>
 
-        <div dir="ltr" class="form-group has-feedback">
+        <div class="form-group has-feedback">
           <input type="password" class="form-control" placeholder="Password" required minlength="6" name="passwordd" [(ngModel)]="password" #passwd="ngModel">
           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
           <div *ngIf="passwd.errors && (passwd.dirty || passwd.touched)" class="alert alert-danger">

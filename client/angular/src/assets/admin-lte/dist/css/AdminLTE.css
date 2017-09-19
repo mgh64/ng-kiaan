@@ -11,14 +11,16 @@
  * -------------------------
  */
 @font-face {
-  font-family: Vazir;
-  src: url('../fonts/Vazir.eot');
-  src: url('../fonts/Vazir.eot?#iefix') format('embedded-opentype'), url('../fonts/Vazir.woff') format('woff'), url('../fonts/Vazir.ttf') format('truetype');
+  font-family: b_yekan;
+  src: url('../fonts/b_yekan.eot');
+  src: url('../fonts/b_yekan.eot?#iefix') format('embedded-opentype'), url('../fonts/b_yekan.woff') format('woff'), url('../fonts/b_yekan.ttf') format('truetype');
   font-weight: normal;
 }
 html,
 body {
   min-height: 100%;
+  /* TODO: my font-size */
+  font-size: 18px;
 }
 .layout-boxed html,
 .layout-boxed body {
@@ -27,7 +29,7 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Vazir', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'b_yekan', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   overflow-y: auto;
@@ -169,7 +171,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Vazir', 'Source Sans Pro', sans-serif;
+  font-family: 'b_yekan', 'Source Sans Pro', sans-serif;
 }
 /* General Links */
 a {
@@ -301,7 +303,7 @@ a:focus {
   line-height: 50px;
   text-align: center;
   width: 230px;
-  font-family: "Vazir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "b_yekan", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding: 0 15px;
   font-weight: 300;
   overflow: hidden;

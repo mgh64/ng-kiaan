@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 import { AuthRoutingModule } from './auth-routing.module';
 
 import { AuthComponent } from './auth.component';
@@ -31,14 +32,16 @@ const widgets = [
 
 @NgModule({
   imports: [
+    FormsModule,
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    NgxPaginationModule
   ],
   declarations: [
     AuthComponent,
     widgets,
     DashboardComponent,
-    PersonListComponent,
+    PersonListComponent
   ],
   providers: []
 })

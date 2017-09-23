@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PersonService } from '../person.service';
 import { Person } from './person';
-import { FirstNameComponent } from '../../shared/first-name/first-name.component';
 
 @Component({
   selector: 'app-person-add',
@@ -9,46 +9,24 @@ import { FirstNameComponent } from '../../shared/first-name/first-name.component
   styleUrls: ['./person-add.component.css']
 })
 export class PersonAddComponent implements OnInit {
-  sharedVarParent ='hello';
+  model = new Person();
 
-  private person_type: any;
-  private first_remaining_type: any;
-
-  // model = new Person();
-
-  constructor() {
-    this.person_type = [
-      {
-        title: "حقیقی",
-        value: "person"
-      }, {
-        title: "شرکت",
-        value: "company"
-      }, {
-        title: "سهامدار",
-        value: "shareholder"
-      }
-    ];
-    this.first_remaining_type = [
-      {
-        title: "بی حساب",
-        value: "incalculable"
-      },
-      {
-        title: "بدهکار",
-        value: "debtor"
-      },
-      {
-        title: "بستانکار",
-        value: "creditor"
-      }
-    ]
-  }
+  private personType: any;
+  private personGroupType: any;
+  private firstRemainingType: any;
+  //
+  constructor(
+    private _PersonService: PersonService
+  ) { }
 
   ngOnInit() {
+    this.personType = this._PersonService.getPersonType();
+    this.firstRemainingType = this._PersonService.getRemainingType();
+    //
+    this._PersonService.getPersonGroupList()
+      .subscribe(personGroupType => {
+        this.personGroupType = personGroupType;
+      })
   }
-
-  // getModel() {
-  //   console.log(this.model);
-  // }
+  //
 }

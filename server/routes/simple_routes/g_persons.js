@@ -12,7 +12,9 @@ module.exports.get = function(req, res, next) {
     if (err) {
       console.log(err);
     } else if (g_person) {
-      res.json(g_person)
+      res.json({
+        data: g_person
+      })
     }
   })
 

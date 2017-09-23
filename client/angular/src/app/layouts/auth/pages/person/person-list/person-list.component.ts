@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Iperson } from '../iperson';
+import { IPersonList } from './person-list';
 import { PersonService } from '../person.service';
 
 
@@ -19,7 +19,7 @@ export class PersonListComponent implements OnInit {
   loading: boolean;
 
   private errorMessage: string;
-  private persons: Iperson[];
+  private persons: IPersonList[];
 
   constructor(
     private _PersonService: PersonService,
@@ -39,7 +39,7 @@ export class PersonListComponent implements OnInit {
     this._PersonService.getPersons()
       .subscribe(
       persons => {
-        let mydata: Iperson[];
+        let mydata: IPersonList[];
         mydata = persons;
         this.total = mydata.length;
         this.p = page;

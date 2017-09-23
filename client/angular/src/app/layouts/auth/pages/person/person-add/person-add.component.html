@@ -14,14 +14,12 @@
     </div>
     <!-- /.box-footer -->
     <div class="box-body">
-      <div>Parent sharedVarParent: {{sharedVarParent}}</div>
-      <app-first-name [(sharedVar)]="sharedVarParent"></app-first-name>
       <!--  -->
-      <!-- <div class="form-group">
+      <div class="form-group">
         <label class="col-sm-2 control-label">نوع شخص</label>
         <div class="col-sm-2">
           <select class="form-control" name="person_type" [(ngModel)]="model.person_type" autofocus>
-            <option *ngFor="let type of person_type" [ngValue]= "type.value">
+            <option *ngFor="let type of personType" [ngValue]= "type.value">
                     {{ type.title }}
             </option>
           </select>
@@ -45,11 +43,22 @@
           </div>
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" [class.has-error]="lastName.invalid && lastName.touched">
         <label for="last_name" class="col-sm-2 control-label">نام خانوادگی</label>
 
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="last_name" [(ngModel)]="model.last_name" placeholder="نام خانوادگی ..." required autocomplete="off">
+          <input #lastName="ngModel" [(ngModel)]="model.last_name" minlength="3" maxlength="30" type="text" class="form-control" name="last_name" placeholder="نام خانوادگی..." required autocomplete="off">
+          <div *ngIf="lastName.invalid && lastName.touched">
+            <div class="alert alert-danger" *ngIf="lastName.errors.required">
+              فیلد اجباری
+            </div>
+            <div class="alert alert-danger" *ngIf="lastName.errors.minlength">
+              نام خانوادگی باید حداقل {{lastName.errors.minlength.requiredLength}} کاراکتر باشد
+            </div>
+            <div class="alert alert-danger" *ngIf="lastName.errors.maxlength">
+              نام خانوادگی باید حداکثر {{lastName.errors.maxlength.requiredLength}} کاراکتر باشد
+            </div>
+          </div>
         </div>
       </div>
       <div class="form-group">
@@ -80,12 +89,10 @@
       <div class="form-group">
         <label class="col-sm-2 control-label">گروه</label>
         <div class="col-sm-3">
-          <select class="form-control">
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-            <option>option 4</option>
-            <option>option 5</option>
+          <select class="form-control" name="group_id" [(ngModel)]="model.group_id">
+            <option *ngFor="let type of personGroupType" [ngValue]= "type.value">
+                    {{ type.title }}
+            </option>
           </select>
         </div>
       </div>
@@ -93,7 +100,7 @@
         <label class="col-sm-2 control-label">مانده اول دوره</label>
         <div class="col-sm-3">
           <select class="form-control" name="first_remaining_type" [(ngModel)]="model.first_remaining_type">
-            <option *ngFor="let type of first_remaining_type" [ngValue]= "type.value">
+            <option *ngFor="let type of firstRemainingType" [ngValue]= "type.value">
               {{ type.title }}
             </option>
           </select>
@@ -103,14 +110,28 @@
         <label for="first_remaining" class="col-sm-2 control-label"></label>
 
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="first_remaining" [(ngModel)]="model.first_remaining" placeholder="مبلغ...">
+          <input #firstRemainig="ngModel" [(ngModel)]="model.first_remaining" minlength="1" maxlength="19" type="text" class="form-control" name="first_remaining" placeholder="مبلغ..." required autocomplete="off">
+          <div *ngIf="firstRemainig.invalid && firstRemainig.touched">
+            <div class="alert alert-danger" *ngIf="firstRemainig.errors.required">
+              فیلد اجباری
+            </div>
+            <div class="alert alert-danger" *ngIf="firstRemainig.errors.minlength">
+              مبلغ باید حداقل {{firstRemainig.errors.minlength.requiredLength}} کاراکتر باشد
+            </div>
+            <div class="alert alert-danger" *ngIf="firstRemainig.errors.maxlength">
+              مبلغ باید حداکثر {{firstRemainig.errors.maxlength.requiredLength}} کاراکتر باشد
+            </div>
+          </div>
         </div>
+        <!-- <div class="col-sm-4">
+          <input type="text" class="form-control" name="first_remaining" [(ngModel)]="model.first_remaining" placeholder="مبلغ...">
+        </div> -->
       </div>
       <div class="form-group">
         <label for="credit_limit" class="col-sm-2 control-label">سقف اعتبار</label>
 
         <div class="col-sm-4">
-          <input type="text" class="form-control" name="credit_limit" [(ngModel)]="model.credit_limit" placeholder="مبلغ...">
+          <input type="text" class="form-control" name="credit_limit" [(ngModel)]="model.credit_limit" placeholder="آزاد...">
         </div>
       </div>
       <div class="form-group">
@@ -120,13 +141,7 @@
           <input type="text" class="form-control" name="address" [(ngModel)]="model.address" placeholder="ادرس...">
         </div>
       </div>
-      <div class="form-group">
-        <label for="comment" class="col-sm-2 control-label">توضیحات</label>
-
-        <div class="col-sm-5">
-          <textarea class="form-control" name="comment" [(ngModel)]="model.comment" rows="3" placeholder="..."></textarea>
-        </div>
-      </div> -->
+      <app-comment [(comment)]="model.comment"></app-comment>
     </div>
     <!-- /.box-body -->
   </form>

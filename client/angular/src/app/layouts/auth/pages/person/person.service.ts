@@ -4,14 +4,13 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/of';
 
 import { Iperson } from './iperson'
 
 @Injectable()
 export class PersonService {
+  //
   private person_type = [{
     title: "حقیقی",
     value: "person"
@@ -22,13 +21,28 @@ export class PersonService {
     title: "سهامدار",
     value: "shareholder"
   }];
+  //
+  private remaining_type = [
+    {
+      title: "بی حساب",
+      value: "incalculable"
+    },
+    {
+      title: "بدهکار",
+      value: "debtor"
+    },
+    {
+      title: "بستانکار",
+      value: "creditor"
+    }
+  ];
+  //
   constructor(
-    private http: Http,
+    private _http: Http,
   ) { }
-
-
+  //
   getPersons(): Observable<Iperson[]> {
-    return this.http.get("/_persons")
+    return this._http.get("/_persons")
       .map(this.extractData)
       .do(data => {
         var person_type_map = {};
@@ -49,6 +63,24 @@ export class PersonService {
       })
       // .do(data => console.log('getPersons: ' + JSON.stringify(data)))
       .catch(this.handleError);
+  }
+
+
+  getPersonGroupList(): Observable<any> {
+    return this._http.get("/g_persons")
+      .map(this.extractData)
+      .do(data => {
+        this.getPersonGroupList = data;
+      })
+      .catch(this.handleError)
+  }
+
+  getPersonType() {
+    return this.person_type;
+  }
+
+  getRemainingType() {
+    return this.remaining_type
   }
 
   private extractData(response: Response) {

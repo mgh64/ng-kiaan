@@ -1,0 +1,9 @@
+<!-- <p>Child comment: {{comment}}</p>
+<input [ngModel]="comment" (ngModelChange)="change($event)"> -->
+<div class="form-group">
+  <label for="comment" class="col-sm-2 control-label">توضیحات</label>
+
+  <div class="col-sm-5">
+    <textarea class="form-control" name="comment" [ngModel]="comment" (ngModelChange)="change($event)" rows="3" placeholder="..."></textarea>
+  </div>
+</div>

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NgxPaginationModule } from 'ngx-pagination';
 import { AuthRoutingModule } from './auth-routing.module';
+
+import { PersonModule } from './pages/person/person.module';
 
 import { AuthComponent } from './auth.component';
 
@@ -16,7 +17,7 @@ import { MenuAsideComponent } from '../../widgets/menu-aside';
 // import { TasksBoxComponent } from './widgets/tasks-box';
 import { UserBoxComponent } from '../../widgets/user-box';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { PersonListComponent } from './pages/person/person-list/person-list.component';
+// import { FirstNameComponent } from './pages/shared/first-name/first-name.component';
 
 const widgets = [
   AppHeaderComponent,
@@ -34,14 +35,15 @@ const widgets = [
   imports: [
     FormsModule,
     CommonModule,
+    PersonModule,
+
     AuthRoutingModule,
-    NgxPaginationModule
   ],
   declarations: [
     AuthComponent,
     widgets,
-    DashboardComponent,
-    PersonListComponent
+    DashboardComponent
+    // FirstNameComponent
   ],
   providers: []
 })

@@ -1,0 +1,9 @@
+{
+  "apps" : [{
+    "name"        : "ng-kiaan_v0.3.0",
+    "script"      : "./bin/www.js",
+    "err_file"    : "ng-kiaan_v0.3.0_err.log",
+    "out_file"    : "ng-kiaan_v0.3.0_out.log",
+    "args"        : "['-x']"
+  }]
+}

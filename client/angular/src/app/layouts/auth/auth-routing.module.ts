@@ -4,8 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './../login/auth.guard';
 
 import { AuthComponent } from './auth.component';
-import { PersonListComponent } from './pages/person/person-list/person-list.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { PersonListComponent } from './pages/person/person-list/person-list.component';
+import { PersonAddComponent } from './pages/person/person-add/person-add.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,11 @@ const routes: Routes = [
         // canActivate: [AuthGuard],
         component: PersonListComponent,
         path: 'persons'
+      },
+      {
+        // canActivate: [AuthGuard],
+        component: PersonAddComponent,
+        path: 'persons/new'
       }
     ]
   }

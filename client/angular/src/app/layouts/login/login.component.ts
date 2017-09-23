@@ -32,7 +32,7 @@ export class LoginComponent {
         // console.log(Response)
         const data: any = Response;
         if (data == true) {
-          this.router.navigate(['/persons']);
+          this.router.navigate(['/persons/new']);
         } else {
           console.error('درخواست غیر مجاز');
         }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToasterModule } from 'angular2-toaster';
@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 
 import { LoginModule } from './layouts/login/login.module';
 import { AuthModule } from './layouts/auth/auth.module';
-import { PersonModule } from './layouts/auth/pages/person/person.module';
+// import { PersonModule } from './layouts/auth/pages/person/person.module';
 
 /// TODO: remove this import
 import { ProductModule } from './pages/product/product.module';
@@ -38,7 +38,7 @@ const pages = [
 
     LoginModule,
     AuthModule,
-    PersonModule,
+    // PersonModule,
     //TODO: remove this item
     ProductModule,
 
